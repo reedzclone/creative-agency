@@ -1,0 +1,101 @@
+.hero {
+  height: 95vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem;
+  position: relative;
+  background-color: #ecedf7; // Fallback color
+  background-image: url("../../assets/images/hero-img.jpg");
+  background-size: cover; // Ensures image covers entire area
+  background-position: center; // Centers the image
+  background-repeat: no-repeat; // Prevents tiling
+  overflow: hidden;
+
+  // Overlay to improve text readability (optional)
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.578); // Adjust opacity as needed
+    z-index: 1;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -10rem;
+    left: 0;
+    width: 100%;
+    height: 320px; // Matches SVG viewBox height
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23ecedf7' fill-opacity='1' d='M0,160L80,181.3C160,203,320,245,480,245.3C640,245,800,203,960,202.7C1120,203,1280,245,1360,266.7L1440,288L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z'%3E%3C/path%3E%3C/svg%3E");
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: rotate(180deg); // Flips to bottom position
+    z-index: 1;
+  }
+
+  &__content {
+    max-width: 700px;
+    z-index: 2;
+    color: #fff;
+  }
+
+  &__title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  &__subtitle {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+    color: #555;
+    text-align: center;
+    color: #fff;
+  }
+
+  &__cta {
+    font-family: "poppins", sans-serif;
+    padding: 1rem 2.8rem;
+    background-color: #05bed6;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 16rem;
+    border-radius: 50px;
+
+    &:hover {
+      background-color: #00b4ca;
+    }
+  }
+
+  // Single upside-down wave styling
+  //   .hero {
+  //     // ... (keep all existing hero styles) ...
+
+  //     /* Exact wave replica from the image */
+  //     &::after {
+  //       content: "";
+  //       position: absolute;
+  //       bottom: -1px;
+  //       left: 0;
+  //       width: 100%;
+  //       height: 60px;
+  //       background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 60' preserveAspectRatio='none'%3E%3Cpath d='M0,56 C250,44 350,56 600,44 C850,56 950,44 1200,56 L1200,60 L0,60 Z' fill='%23f5f5f5'%3E%3C/path%3E%3C/svg%3E");
+  //       background-size: cover;
+  //       background-repeat: no-repeat;
+  //       z-index: 1;
+  //     }
+  //   }
+}

@@ -1,0 +1,111 @@
+.header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem 5rem;
+  align-items: center;
+  background-color: transparent;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  //   position: absolute;
+  width: 100%;
+  z-index: 100;
+  color: #fff;
+
+  &.scrolled {
+    background-color: black; /* Black background when scrolled */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Optional: Add shadow on scroll */
+  }
+
+  .left-side {
+    .header__nav {
+      &-list {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+        text-align: center;
+        align-items: center;
+
+        .header__nav-item {
+          font-size: 1rem;
+        }
+
+        .header_logo {
+          font-size: 2rem;
+          font-weight: 700;
+          color: #fff;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .right-side {
+    .header__nav {
+      &-list {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+        align-items: center;
+      }
+      .header__nav-item {
+        font-size: 1.4rem;
+      }
+
+      .nav-btn {
+        font-family: "poppins", sans-serif;
+        font-weight: 500;
+        padding: 0.8rem 2rem;
+        font-size: 1.1rem;
+        border-radius: 20px;
+        outline: none;
+        border: none;
+        background-color: #4703ff;
+        color: #fff;
+      }
+    }
+  }
+}
+
+// .header {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+
+//   background-color: transparent;
+//   position: absolute;
+//   width: 100%;
+//   z-index: 100;
+
+//   &__logo {
+//     font-size: 2rem;
+//     font-weight: 700;
+//     color: #000;
+//   }
+
+//   &__nav {
+//     &-list {
+//       display: flex;
+//       gap: 3rem;
+//       list-style: none;
+//     }
+
+//     &-item {
+//       font-size: 1.1rem;
+//       cursor: pointer;
+//       transition: color 0.3s ease;
+
+//       &:hover {
+//         color: #555;
+//       }
+
+//       &.active {
+//         font-weight: 600;
+//         color: #000;
+//       }
+//     }
+//   }
+
+//   .right-side {
+//     p-left: 10rem;
+//   }
+// }
